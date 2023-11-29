@@ -1,0 +1,88 @@
+#---
+#name: Backlog Ticket
+#about: New feature/ticket for the project
+#title: ''
+#labels: ''
+#assignees: ''
+#
+#---
+#
+## Overview (What and Why)
+#  {Write description of what the feature should be, why}
+#  
+#  # How
+#  {Describe what needs to be done.}
+#
+#- [ ]  Task 1
+#- [ ]  Task 2
+#  
+#  # Definition of Done
+#  {Write definition of done, how to verify}
+#
+#- [ ]  Unit test cases (delete if not applicable)
+#- [ ]  Docs updated (delete if not applicable)
+#- [ ]  PR approved and merged to master (delete if not applicable)
+#  
+#  # Open Issues and Blockers
+#  {Dependencies issue or PR or some other blocker.}
+
+
+name: Backlog Ticket
+description: File a backlog ticket
+title: "[Backlog]: "
+labels: ["backlog"]
+projects: ["swanky-cli"]
+
+body:
+  - type: textarea
+    id: overview
+    attributes:
+      label: Overview (What and Why)
+      description: Write description of what the feature should be, why
+    validations:
+      required: true
+  - type: textarea
+    id: how
+    attributes:
+      label: How
+      description: Describe what needs to be done.
+    validations:
+      required: true
+  - type: checkboxes
+    id: tasks
+    attributes:
+      label: Tasks
+      description: List of tasks to be done
+      options:
+        - label: Task 1
+          required: true
+        - label: Task 2
+          required: true
+  - type: textarea
+    id: definition-of-done
+    attributes:
+      label: Definition of Done
+      description: Write definition of done, how to verify
+      placeholder: Write definition of done, how to verify
+    validations:
+      required: true
+  - type: checkboxes
+    id: done
+    attributes:
+      label: Done
+      description: List of done tasks
+      options:
+        - label: Unit test cases (delete if not applicable)
+          required: true
+        - label: Docs updated (delete if not applicable)
+          required: true
+        - label: PR approved and merged to master (delete if not applicable)
+          required: true
+  - type: textarea
+    id: open-issues-and-blockers
+    attributes:
+      label: Open Issues and Blockers
+      description: Dependencies issue or PR or some other blocker.
+    validations:
+      required: true
+
