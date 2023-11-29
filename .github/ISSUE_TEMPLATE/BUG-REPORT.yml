@@ -46,7 +46,7 @@ body:
     attributes:
       label: Environment
       description: Describe the environment in which you encountered this bug. Use the list below as a starting point and add additional information if you think it's relevant.
-      placeholder: |
+      value: |
         - Operating System
         - Project version/tag: (run 'swanky version')
         - Rust version (run `rustup show`)
@@ -57,7 +57,9 @@ body:
       label: Logs, Errors, Screenshots
       description: Please provide the text of any logs or errors that you experienced; if applicable, provide screenshots to help illustrate the problem.
       placeholder: |
-        ```
         Paste your logs here
-        ```
-
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional information
+      description: Add any other context about the problem here.
