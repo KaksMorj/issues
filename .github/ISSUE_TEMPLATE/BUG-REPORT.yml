@@ -17,12 +17,47 @@ body:
     id: steps-to-reproduce
     attributes:
       label: Steps to reproduce
-      description: Tell us how to reproduce this issue. Please include a code snippet or a link to a repository that reproduces the issue.
+      description: Tell us how to reproduce this issue.
       placeholder: |
         1. Go to '...'
         2. Click on '....'
         3. Scroll down to '....'
-        4. See error"
+        4. See error
     validations:
       required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: Tell us what should happen
+      placeholder: Write your expected behavior here
+    validations:
+      required: true
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual behavior
+      description: Tell us what happens instead
+      placeholder: Write your actual behavior here
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Describe the environment in which you encountered this bug. Use the list below as a starting point and add additional information if you think it's relevant.
+      placeholder: |
+        - Operating System
+        - Project version/tag: (run 'swanky version')
+        - Rust version (run `rustup show`)
+        - Node version (run `node --version`)
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs, Errors, Screenshots
+      description: Please provide the text of any logs or errors that you experienced; if applicable, provide screenshots to help illustrate the problem.
+      placeholder: |
+        ```
+        Paste your logs here
+        ```
 
