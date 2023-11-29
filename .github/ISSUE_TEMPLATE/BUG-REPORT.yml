@@ -1,7 +1,7 @@
 name: Bug Report
 description: File a bug report
 title: "[Bug]: "
-labels: ["bug", "triage"]
+labels: ["bug"]
 projects: ["swanky-cli"]
 
 body:
@@ -51,6 +51,8 @@ body:
         - Project version/tag: (run 'swanky version')
         - Rust version (run `rustup show`)
         - Node version (run `node --version`)
+    validations:
+      required: true
   - type: textarea
     id: logs
     attributes:
@@ -58,6 +60,8 @@ body:
       description: Please provide the text of any logs or errors that you experienced; if applicable, provide screenshots to help illustrate the problem.
       placeholder: |
         Paste your logs here
+    validations:
+      required: true
   - type: textarea
     id: additional-info
     attributes:
